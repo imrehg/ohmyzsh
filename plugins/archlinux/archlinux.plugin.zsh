@@ -136,6 +136,27 @@ if (( $+commands[pacaur] )); then
   alias paupd="pacaur -Sy"
 fi
 
+if (( $+commands[paru] )); then
+  alias prclean='paru -Sc'
+  alias prclr='paru -Scc'
+  alias prupg='paru -Syu'
+  alias prsu='paru -Syu --noconfirm'
+  alias prin='paru -S'
+  alias prins='paru -U'
+  alias prre='paru -R'
+  alias prrem='paru -Rns'
+  alias prrep='paru -Si'
+  alias prreps='paru -Ss'
+  alias prloc='paru -Qi'
+  alias prlocs='paru -Qs'
+  alias prlst='paru -Qe'
+  alias prorph='paru -Qtd'
+  alias prpkg='paru -G'
+  alias prinsd='paru -S --asdeps'
+  alias prmir='paru -Syy'
+  alias prupd="paru -Sy"
+fi
+
 if (( $+commands[trizen] )); then
   alias trconf='trizen -C'
   alias trupg='trizen -Syua'
@@ -195,6 +216,8 @@ function upgrade() {
     yay -Syu
   elif (( $+commands[trizen] )); then
     trizen -Syu
+  elif (( $+commands[paru] )); then
+    paru -Syu
   elif (( $+commands[pacaur] )); then
     pacaur -Syu
   elif (( $+commands[aura] )); then

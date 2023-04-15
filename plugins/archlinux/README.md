@@ -107,6 +107,30 @@ upgrades were available. Use `pacman -Que` instead.
 | pasu    | `pacaur -Syua --no-confirm`       | Same as `paupg`, but without confirmation                           |
 | upgrade[¹](#f1) | `pacaur -Syu`             | Sync with repositories before upgrading packages                    |
 
+#### Paru
+
+| Alias   | Command                           | Description                                                         |
+|---------|-----------------------------------|---------------------------------------------------------------------|
+| prclean | `paru -Sc`                        | Clean out old and unused caches and packages                        |
+| prclr   | `paru -Scc`                       | Remove all files from the cache                                     |
+| prin    | `paru -S`                         | Install packages from the repositories                              |
+| prins   | `paru -U`                         | Install a package from a local file                                 |
+| prinsd  | `paru -S --asdeps`                | Install packages as dependencies of another package                 |
+| prloc   | `paru -Qi`                        | Display information about a package in the local database           |
+| prlocs  | `paru -Qs`                        | Search for packages in the local database                           |
+| prlst   | `paru -Qe`                        | List installed packages including from AUR (tagged as "local")      |
+| prmir   | `paru -Syy`                       | Force refresh of all package lists after updating mirrorlist        |
+| prorph  | `paru -Qtd`                       | List all orphaned packages                                          |
+| prpkg   | `paru -G`                         | Download the PKGBUILD and related files
+| prre    | `paru -R`                         | Remove packages, keeping its settings and dependencies              |
+| prrem   | `paru -Rns`                       | Remove packages, including its settings and unneeded dependencies   |
+| prrep   | `paru -Si`                        | Display information about a package in the repositories             |
+| prreps  | `paru -Ss`                        | Search for packages in the repositories                             |
+| prupd   | `paru -Sy`                        | Update and refresh local package, ABS and AUR databases             |
+| prupg   | `paru -Syua`                      | Sync with repositories before upgrading all packages (from AUR too) |
+| prsu    | `paru -Syua --no-confirm`         | Same as `prupg`, but without confirmation                           |
+| upgrade[¹](#f1) | `paru -Syu`               | Sync with repositories before upgrading packages                    |
+
 #### Trizen
 
 | Alias   | Command                           | Description                                                         |
@@ -163,9 +187,10 @@ whether the package manager is installed, checked in the following order:
 
 1. `yay`
 2. `trizen`
-3. `pacaur`
-4. `aura`
-5. `pacman`
+3. `paru`
+4. `pacaur`
+5. `aura`
+6. `pacman`
 
 ## Contributors
 
